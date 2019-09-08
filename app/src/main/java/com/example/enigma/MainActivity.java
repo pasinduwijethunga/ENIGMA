@@ -2,9 +2,6 @@ package com.example.enigma;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -18,11 +15,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -40,6 +49,8 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -76,11 +87,12 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
+        int id = item.getItemId();
+        Fragment fragmentHome = null;
         if (id == R.id.nav_home) {
 
+            fragmentHome = new DisplayHome();
         } else if (id == R.id.nav_account) {
 
 
@@ -92,8 +104,20 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+        if(fragmentHome != null){
+            FragmentManager fmhome = getSupportFragmentManager();
+            FragmentTransaction fthome = fmhome.beginTransaction();
+            fthome.replace(R.id.screen_area,fragmentHome);
+            fthome.commit();
+
+        }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
+
 }

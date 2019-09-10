@@ -1,5 +1,6 @@
 package com.example.enigma;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.View;
@@ -29,6 +30,14 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    DatabaseHelperProduct mydb;
+
+    RecyclerView recyclerView;
+    ProductAdapterhome adapterhome;
+
+    List<Product> productList;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +45,31 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        productList = new ArrayList<>();
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        mydb = new DatabaseHelperProduct(this);
+
+
+        //adding some items to our list
+        productList.add(new Product(5, "Samitha", "1asasassa" , 7.0, 4.3, R.drawable.p1));
+        productList.add(new Product(2, "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)", "14 inch, Gray, 1.659 kg", 4.3, 60000, R.drawable.p2_img));
+        productList.add(new Product(3, "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)", "13.3 inch, Silver, 1.35 kg", 4.3, 60000, R.drawable.p4_img));
+        productList.add(new Product(4, "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)", "13.3 inch, Silver, 1.35 kg", 4.3, 60000, R.drawable.p5_img));
+        productList.add(new Product(5, "Samitha", "1asasassa" , 7.0, 4.3, R.drawable.p1));
+        productList.add(new Product(2, "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)", "14 inch, Gray, 1.659 kg", 4.3, 60000, R.drawable.p2_img));
+        productList.add(new Product(3, "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)", "13.3 inch, Silver, 1.35 kg", 4.3, 60000, R.drawable.p4_img));
+        productList.add(new Product(4, "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)", "13.3 inch, Silver, 1.35 kg", 4.3, 60000, R.drawable.p5_img));
+
+
+
+        adapterhome = new ProductAdapterhome(this, productList);
+        recyclerView.setAdapter(adapterhome);
+
 
 
 
@@ -92,13 +126,19 @@ public class MainActivity extends AppCompatActivity
         Fragment fragmentHome = null;
         if (id == R.id.nav_home) {
 
-            fragmentHome = new DisplayHome();
+            Intent home = new Intent(this,MainActivity.class);
+            startActivity(home);
+
+
         } else if (id == R.id.nav_account) {
+
 
 
         } else if (id == R.id.nav_purchases) {
 
         } else if (id == R.id.nav_admin) {
+
+            fragmentHome = new AdminLogin();
 
         } else if (id == R.id.nav_share) {
 

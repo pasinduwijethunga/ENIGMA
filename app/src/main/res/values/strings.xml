@@ -22,4 +22,21 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtwelcome">welcome</string>
+    <string name="txtemail">e-mail</string>
+    <string name="txtpass">password</string>
+    <string name="btnlogin">Login</string>
+    <string name="pbtnproduct">Products</string>
+    <string name="pbtnaccount">Accounts</string>
+    <string name="pbtnSales">Sales</string>
+    <string name="pbtndelivery">Deliveries</string>
+    <string name="tatViewAdd">Products</string>
+    <string name="txtaddorupdate">Add/Update</string>
+    <string name="btnclear">Clear</string>
+    <string name="txtid">ID...</string>
+    <string name="txtName">Name...</string>
+    <string name="txtDesc">Description...</string>
+    <string name="txtRate">Rate...</string>
+    <string name="txtPrice">Price...</string>
+    <string name="btnInsertDate">Insert Data</string>
 </resources>

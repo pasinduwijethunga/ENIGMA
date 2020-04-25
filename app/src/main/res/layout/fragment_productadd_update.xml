@@ -10,10 +10,10 @@
 
     <TextView
         android:id="@+id/ProductstxtView"
-        android:layout_width="255dp"
-        android:layout_height="83dp"
+        android:layout_width="252dp"
+        android:layout_height="61dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/tatViewAdd"
         android:textAlignment="center"
@@ -35,57 +35,41 @@
         android:hint="@string/txtRate"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDesc" />
 
     <EditText
-        android:id="@+id/txtID"
-        android:layout_width="332dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/greyish"
-        android:ems="10"
-        android:hint="@string/txtid"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ProductstxtView" />
-
-    <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/txtProID"
         android:layout_width="334dp"
-        android:layout_height="39dp"
+        android:layout_height="38dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@color/greyish"
         android:ems="10"
         android:hint="@string/txtName"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtID" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCusName" />
 
     <EditText
         android:id="@+id/txtDesc"
         android:layout_width="334dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="@color/greyish"
         android:ems="10"
         android:hint="@string/txtDesc"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProID" />
 
     <EditText
         android:id="@+id/txtPrice"
@@ -99,30 +83,68 @@
         android:hint="@string/txtPrice"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtRate" />
 
     <Button
-        android:id="@+id/btnInsert"
-        android:layout_width="364dp"
-        android:layout_height="56dp"
+        android:id="@+id/btnUpdate"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/updateData"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnViewAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toEndOf="@+id/btnViewAll" />
+
+    <Button
+        android:id="@+id/btnViewAll"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:text="@string/viewAllData"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInsert" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
         android:background="@color/colorAccent"
         android:text="@string/btnInsertDate"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
 
     <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="123dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/btnClear"
-        android:layout_width="128dp"
-        android:layout_height="56dp"
+        android:layout_width="342dp"
+        android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -130,11 +152,42 @@
         android:background="@color/cancel"
         android:text="@string/btnclear"
         android:textColor="@color/white"
+
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInsert"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintTop_toBottomOf="@+id/btnViewAll"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/deleteData"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnInsert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toEndOf="@+id/btnInsert" />
+
+    <EditText
+        android:id="@+id/txtCusName"
+        android:layout_width="203dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/holo_orange_light"
+        android:ems="10"
+        android:hint="@string/txtid"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/btnsearch"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProductstxtView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

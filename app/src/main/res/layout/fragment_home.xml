@@ -73,7 +73,7 @@
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/btnBuy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="130dp"
@@ -87,18 +87,14 @@
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/btnDelivery"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_marginLeft="130dp"
-                            android:layout_marginTop="60dp"
-                            android:layout_toRightOf="@id/textViewRating"
-                            android:background="@color/colorAccent"
-                            android:paddingLeft="15dp"
-                            android:paddingRight="15dp"
-                            android:text="Deliver"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                            android:textStyle="bold" />
+                            android:layout_marginTop="70dp"
+                            android:text="@string/delivery" />
 
 
                 </RelativeLayout>

@@ -21,7 +21,10 @@ public class panel extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_panel, container, false);
+
         Button btnadminpanel = (Button)view.findViewById(R.id.push_button_product);
+        Button btnDeliverySection = (Button) view.findViewById(R.id.push_button_delivery);
+        Button btnEmployeeSection = (Button) view.findViewById(R.id.push_button_account);
 
         btnadminpanel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +35,26 @@ public class panel extends Fragment {
 
             }
         });
+
+        btnDeliverySection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                //ft.replace(R.id.screen_area,new ViewDeliveryAdmin());
+                ft.replace(R.id.screen_area,new DeliveryViewAdmin());
+                ft.commit();
+            }
+        });
+
+        btnEmployeeSection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.screen_area,new RegisterEmployee());
+                ft.commit();
+            }
+        });
+
         return view;
     }
 

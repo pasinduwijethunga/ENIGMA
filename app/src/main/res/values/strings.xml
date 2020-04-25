@@ -39,4 +39,41 @@
     <string name="txtRate">Rate...</string>
     <string name="txtPrice">Price...</string>
     <string name="btnInsertDate">Insert Data</string>
+    <string name="search">Search</string>
+    <string name="deleteData">Delete Data</string>
+    <string name="viewAllData">View All</string>
+    <string name="updateData">Update Data</string>
+    <string name="address">Address</string>
+    <string name="delivery">Delivery</string>
+    <string name="cusName">Customer Name</string>
+    <string name="proID">Product ID</string>
+    <string name="proName">Product Name</string>
+    <string name="qty">Quantity</string>
+    <string name="phone">Phone</string>
+    <string name="addDelivery">Add Delivery</string>
+    <string name="updateDelivery">Update Delivery</string>
+    <string name="deleteDelivery">Delete Delivery</string>
+
+    <!-- umaya-->
+    <string name="LoginHeader">LOGIN</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="RegisterLink">No account yet? REGISTER</string>
+    <string name="RegisterHeader">REGISTER</string>
+    <string name="btnRegister">REGISTER</string>
+    <string name="LoginLink">Already registered? LOGIN</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="ID">Employee ID</string>
+    <string name="Name">Employee Name</string>
+    <string name="Contact">Contact Number</string>
+    <string name="logo">ENIGMA</string>
+    <string name="AccountHeader">My Account</string>
+    <string name="btnSaveChanges">SAVE CHANGES</string>
+    <string name="btnDelete">DELETE MY ACCOUNT</string>
+    <string name="viewEmployee">View All Employees</string>
+    <string name="updateEmp">UPDATE EMPLOYEE</string>
+    <string name="deleteEmp">DELETE EMPLOYEE</string>
+    <string name="viewDelivery">View All Delivery</string>
+
 </resources>
